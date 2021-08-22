@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TyToSearch'
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = 'Typo-Tolerant Search'
   s.description      = 'Search Engine class that is returning hits and "Did you mean" suggestions. To use this typo-tolerant search, provide it an array of the keywords you want to search. It can be initialized from JSON Data or the path of that JSON file with specified keyPath of the array of keywords in it.'
   s.homepage         = 'https://github.com/nikola-markovic/TyToSearch'
