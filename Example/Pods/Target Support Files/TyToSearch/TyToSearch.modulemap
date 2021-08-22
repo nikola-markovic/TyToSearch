@@ -1,0 +1,6 @@
+framework module TyToSearch {
+  umbrella header "TyToSearch-umbrella.h"
+
+  export *
+  module * { export * }
+}

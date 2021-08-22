@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		103FAEA24FF6862639386B4AB7E3F4E7 /* TyToSearch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 50FA1E3A0490CF5F6F62C812A4552DE6 /* TyToSearch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B9B53140EE0E8F5CD8B5FE48455F891 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		4AE230E30279B14D3954118F812FE9D2 /* TyToSearch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E10C6A3C1276D45CE9FA21A6046DA0D9 /* TyToSearch-dummy.m */; };
+		4C0B1DCFCBBAD1C24BFECBD553DCD27E /* Pods-TyToSearch_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72017693798A2A9957922C808378A94C /* Pods-TyToSearch_Example-dummy.m */; };
+		7424168E58C8335818C25DD24F4A58E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C0BE219ADED41BB055270791CEA28D9F /* Pods-TyToSearch_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 474CAF948BE6029EB62EE63C65F294C4 /* Pods-TyToSearch_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2477B5526D20CAE00511178 /* TyToSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2477B4F26D20C4E00511178 /* TyToSearch.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		282E7E6EB9F3C2236EC0832B24B88BC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6859BF45B6D46C73B1144054766E2AC8;
+			remoteInfo = TyToSearch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		028CE654234FEE5DB920CCCA86F276AD /* TyToSearch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TyToSearch.modulemap; sourceTree = "<group>"; };
+		14D6869C0B0D5C1EDA3C698F7D0E5ACD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		44893C90DD8FF146B88F7E2E0A9D6830 /* Pods-TyToSearch_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TyToSearch_Example-frameworks.sh"; sourceTree = "<group>"; };
+		474CAF948BE6029EB62EE63C65F294C4 /* Pods-TyToSearch_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TyToSearch_Example-umbrella.h"; sourceTree = "<group>"; };
+		50FA1E3A0490CF5F6F62C812A4552DE6 /* TyToSearch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TyToSearch-umbrella.h"; sourceTree = "<group>"; };
+		645C7D13ED540857F9621C3FEB95FADE /* Pods-TyToSearch_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TyToSearch_Example.release.xcconfig"; sourceTree = "<group>"; };
+		72017693798A2A9957922C808378A94C /* Pods-TyToSearch_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TyToSearch_Example-dummy.m"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7478346264F5AD9EB3E4882EC59C05EE /* TyToSearch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TyToSearch-prefix.pch"; sourceTree = "<group>"; };
+		84D6DDA7706F4570D0E20E0B0C560455 /* Pods-TyToSearch_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TyToSearch_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9A719A2FEA40323B4F9FBFCB1C2A1BB1 /* TyToSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TyToSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F3681B7EA741B6DF134946647196019 /* TyToSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TyToSearch.debug.xcconfig; sourceTree = "<group>"; };
+		A6DFCA3FDFFA54010FFCADDCDF97DAA7 /* TyToSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TyToSearch.release.xcconfig; sourceTree = "<group>"; };
+		AC6AF0195968B1C250BBFC058D2AB792 /* Pods-TyToSearch_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TyToSearch_Example.modulemap"; sourceTree = "<group>"; };
+		B747AABDA7FE7C835C1D007FBAD0517D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C1FB5235E7B02A84B2927ADB97307259 /* Pods_TyToSearch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TyToSearch_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2477B4F26D20C4E00511178 /* TyToSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TyToSearch.swift; path = TyToSearch/TyToSearch.swift; sourceTree = "<group>"; };
+		C304C4585100E9A0547F5DA4EEEF0BEA /* TyToSearch.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TyToSearch.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CEED3BCDE3B50D70B417B73A6FE5AFFE /* Pods-TyToSearch_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TyToSearch_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D7341B833A4F28E26832A60B94A5DC82 /* Pods-TyToSearch_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TyToSearch_Example-Info.plist"; sourceTree = "<group>"; };
+		D97596010E4C763C72EEAE686F69AC15 /* Pods-TyToSearch_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TyToSearch_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		DAD5C6C6FA7E5B7F2587056DD4B338AD /* TyToSearch-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TyToSearch-Info.plist"; sourceTree = "<group>"; };
+		E10C6A3C1276D45CE9FA21A6046DA0D9 /* TyToSearch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TyToSearch-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0221D3495366C72F9929118CAF9CE946 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B9B53140EE0E8F5CD8B5FE48455F891 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		153E0A932FA0E593DF750E6D55098956 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7424168E58C8335818C25DD24F4A58E4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18180481A29E67416F5FB9B3E347F5AB /* Pods-TyToSearch_Example */ = {
+			isa = PBXGroup;
+			children = (
+				AC6AF0195968B1C250BBFC058D2AB792 /* Pods-TyToSearch_Example.modulemap */,
+				84D6DDA7706F4570D0E20E0B0C560455 /* Pods-TyToSearch_Example-acknowledgements.markdown */,
+				D97596010E4C763C72EEAE686F69AC15 /* Pods-TyToSearch_Example-acknowledgements.plist */,
+				72017693798A2A9957922C808378A94C /* Pods-TyToSearch_Example-dummy.m */,
+				44893C90DD8FF146B88F7E2E0A9D6830 /* Pods-TyToSearch_Example-frameworks.sh */,
+				D7341B833A4F28E26832A60B94A5DC82 /* Pods-TyToSearch_Example-Info.plist */,
+				474CAF948BE6029EB62EE63C65F294C4 /* Pods-TyToSearch_Example-umbrella.h */,
+				CEED3BCDE3B50D70B417B73A6FE5AFFE /* Pods-TyToSearch_Example.debug.xcconfig */,
+				645C7D13ED540857F9621C3FEB95FADE /* Pods-TyToSearch_Example.release.xcconfig */,
+			);
+			name = "Pods-TyToSearch_Example";
+			path = "Target Support Files/Pods-TyToSearch_Example";
+			sourceTree = "<group>";
+		};
+		2ADCE5F1CACEB1747101DEBEE8040E09 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				028CE654234FEE5DB920CCCA86F276AD /* TyToSearch.modulemap */,
+				E10C6A3C1276D45CE9FA21A6046DA0D9 /* TyToSearch-dummy.m */,
+				DAD5C6C6FA7E5B7F2587056DD4B338AD /* TyToSearch-Info.plist */,
+				7478346264F5AD9EB3E4882EC59C05EE /* TyToSearch-prefix.pch */,
+				50FA1E3A0490CF5F6F62C812A4552DE6 /* TyToSearch-umbrella.h */,
+				9F3681B7EA741B6DF134946647196019 /* TyToSearch.debug.xcconfig */,
+				A6DFCA3FDFFA54010FFCADDCDF97DAA7 /* TyToSearch.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TyToSearch";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5BE7014626C84518D4D08C69200A824F /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F419A1CF0486363F3559AAD5CD8FAF12 /* TyToSearch */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7D573E0920CA7EBC8497B4D7C72C510E /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				14D6869C0B0D5C1EDA3C698F7D0E5ACD /* LICENSE */,
+				B747AABDA7FE7C835C1D007FBAD0517D /* README.md */,
+				C304C4585100E9A0547F5DA4EEEF0BEA /* TyToSearch.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		A6C0E9CDFBCEAA7128468F0909F520BE /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				18180481A29E67416F5FB9B3E347F5AB /* Pods-TyToSearch_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				5BE7014626C84518D4D08C69200A824F /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				D42A061DBD05EAA11202B7048C6DCD2A /* Products */,
+				A6C0E9CDFBCEAA7128468F0909F520BE /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D42A061DBD05EAA11202B7048C6DCD2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1FB5235E7B02A84B2927ADB97307259 /* Pods_TyToSearch_Example.framework */,
+				9A719A2FEA40323B4F9FBFCB1C2A1BB1 /* TyToSearch.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F419A1CF0486363F3559AAD5CD8FAF12 /* TyToSearch */ = {
+			isa = PBXGroup;
+			children = (
+				C2477B4F26D20C4E00511178 /* TyToSearch.swift */,
+				7D573E0920CA7EBC8497B4D7C72C510E /* Pod */,
+				2ADCE5F1CACEB1747101DEBEE8040E09 /* Support Files */,
+			);
+			name = TyToSearch;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		18794B97762359E063FE47EC1AE7D2EB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				103FAEA24FF6862639386B4AB7E3F4E7 /* TyToSearch-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		745483912E0286F5CDFD93C202968463 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0BE219ADED41BB055270791CEA28D9F /* Pods-TyToSearch_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6859BF45B6D46C73B1144054766E2AC8 /* TyToSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1CF05C8CB452CAA073C1339FE75A08A /* Build configuration list for PBXNativeTarget "TyToSearch" */;
+			buildPhases = (
+				18794B97762359E063FE47EC1AE7D2EB /* Headers */,
+				24B79C5FB20225F73F62C2204AC13C2F /* Sources */,
+				153E0A932FA0E593DF750E6D55098956 /* Frameworks */,
+				F8238632251C2AF19443CCDC574110E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TyToSearch;
+			productName = TyToSearch;
+			productReference = 9A719A2FEA40323B4F9FBFCB1C2A1BB1 /* TyToSearch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FF3DA9C3F63C999BE4AAABC172556D80 /* Pods-TyToSearch_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89B335491708D1B07E5676C1B0FBF28C /* Build configuration list for PBXNativeTarget "Pods-TyToSearch_Example" */;
+			buildPhases = (
+				745483912E0286F5CDFD93C202968463 /* Headers */,
+				105AA58111256A1AC3EB18D486643024 /* Sources */,
+				0221D3495366C72F9929118CAF9CE946 /* Frameworks */,
+				352BBF76EA6F0E11B84DDC5B7CC16A57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBC0599E0290DC7ED2102C7256024678 /* PBXTargetDependency */,
+			);
+			name = "Pods-TyToSearch_Example";
+			productName = "Pods-TyToSearch_Example";
+			productReference = C1FB5235E7B02A84B2927ADB97307259 /* Pods_TyToSearch_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					6859BF45B6D46C73B1144054766E2AC8 = {
+						LastSwiftMigration = 1250;
+					};
+					FF3DA9C3F63C999BE4AAABC172556D80 = {
+						LastSwiftMigration = 1250;
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = D42A061DBD05EAA11202B7048C6DCD2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF3DA9C3F63C999BE4AAABC172556D80 /* Pods-TyToSearch_Example */,
+				6859BF45B6D46C73B1144054766E2AC8 /* TyToSearch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		352BBF76EA6F0E11B84DDC5B7CC16A57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8238632251C2AF19443CCDC574110E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		105AA58111256A1AC3EB18D486643024 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C0B1DCFCBBAD1C24BFECBD553DCD27E /* Pods-TyToSearch_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24B79C5FB20225F73F62C2204AC13C2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AE230E30279B14D3954118F812FE9D2 /* TyToSearch-dummy.m in Sources */,
+				C2477B5526D20CAE00511178 /* TyToSearch.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBC0599E0290DC7ED2102C7256024678 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TyToSearch;
+			target = 6859BF45B6D46C73B1144054766E2AC8 /* TyToSearch */;
+			targetProxy = 282E7E6EB9F3C2236EC0832B24B88BC3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		197972C76EF8DE9C7133420EE527130A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F3681B7EA741B6DF134946647196019 /* TyToSearch.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TyToSearch/TyToSearch-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TyToSearch/TyToSearch-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TyToSearch/TyToSearch.modulemap";
+				PRODUCT_MODULE_NAME = TyToSearch;
+				PRODUCT_NAME = TyToSearch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		AAD4402A65721F9373DFEFB29DAD8F9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6DFCA3FDFFA54010FFCADDCDF97DAA7 /* TyToSearch.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TyToSearch/TyToSearch-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TyToSearch/TyToSearch-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TyToSearch/TyToSearch.modulemap";
+				PRODUCT_MODULE_NAME = TyToSearch;
+				PRODUCT_NAME = TyToSearch;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BF461B9939EB38CC2698C6385725730C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 645C7D13ED540857F9621C3FEB95FADE /* Pods-TyToSearch_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TyToSearch_Example/Pods-TyToSearch_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TyToSearch_Example/Pods-TyToSearch_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F2B6E35EEDFD6ED6A174FEF6FC189B5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEED3BCDE3B50D70B417B73A6FE5AFFE /* Pods-TyToSearch_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TyToSearch_Example/Pods-TyToSearch_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TyToSearch_Example/Pods-TyToSearch_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89B335491708D1B07E5676C1B0FBF28C /* Build configuration list for PBXNativeTarget "Pods-TyToSearch_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2B6E35EEDFD6ED6A174FEF6FC189B5D /* Debug */,
+				BF461B9939EB38CC2698C6385725730C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1CF05C8CB452CAA073C1339FE75A08A /* Build configuration list for PBXNativeTarget "TyToSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				197972C76EF8DE9C7133420EE527130A /* Debug */,
+				AAD4402A65721F9373DFEFB29DAD8F9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

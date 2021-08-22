@@ -1,0 +1,6 @@
+framework module Pods_TyToSearch_Example {
+  umbrella header "Pods-TyToSearch_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

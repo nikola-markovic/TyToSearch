@@ -1,0 +1,22 @@
+{
+  "name": "TyToSearch",
+  "version": "0.1.0",
+  "summary": "A short description of TyToSearch.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/nm-healthly/TyToSearch",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "nm-healthly": "nikolamarkovic1991@yahoo.com"
+  },
+  "source": {
+    "git": "https://github.com/nm-healthly/TyToSearch.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "TyToSearch/Classes/**/*"
+}

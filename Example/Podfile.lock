@@ -1,0 +1,16 @@
+PODS:
+  - TyToSearch (0.1.0)
+
+DEPENDENCIES:
+  - TyToSearch (from `../`)
+
+EXTERNAL SOURCES:
+  TyToSearch:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TyToSearch: 9f3fdf748b31926fd2a1a2f75d2f16a8d065bea5
+
+PODFILE CHECKSUM: 4e49fd28a68d24526344e70144409c89237fbd5c
+
+COCOAPODS: 1.10.2
