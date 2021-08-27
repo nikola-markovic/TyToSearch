@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let filePath = Bundle.main.path(forResource: "Countries", ofType: "json") ?? ""
-        searchEngine = TyToSearchEngine(fromFileAtPath: filePath, keyPath: "countries")
+        searchEngine = TyToSearchEngine(fromJsonFileAtPath: filePath, keyPath: "countries")
     }
     
     
