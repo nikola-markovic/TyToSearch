@@ -12,9 +12,14 @@ import TyToSearch
 class ViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var loadingView: UIActivityIndicatorView!
     
     var searchEngine: TyToSearchEngine!
-    var results = [[String](), [String]()]
+    var results = [[String](), [String]()] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     var sectionTitles = ["Hits", "Suggestions"]
     
     override func viewDidLoad() {
@@ -23,20 +28,27 @@ class ViewController: UIViewController {
         searchEngine = TyToSearchEngine(fromJsonFileAtPath: filePath, keyPath: "countries")
     }
     
-    
     @IBAction func didChangeSearchText(_ sender: UITextField) {
-        guard let text = sender.text,
-              text.count > 2
-        else {
-            results.removeAll()
-            tableView.reloadData()
-            return
+//        Uncomment this code if you're using a small array of terms/words and you want live results
+//        guard let text = sender.text
+//        else { return }
+//        searchEngine.search(text) { result in
+//            self.results = [result.hits, result.suggestions]
+//        }
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        guard let text = textField.text
+        else { return true }
+        loadingView.startAnimating()
+        searchEngine.search(text) { [weak self] result in
+            self?.loadingView.stopAnimating()
+            self?.results = [result.hits, result.suggestions]
         }
-        
-        searchEngine.search(text) { result in
-            self.results = [result.hits, result.suggestions]
-            self.tableView.reloadData()
-        }
+        return true
     }
 }
 

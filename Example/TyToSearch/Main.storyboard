@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TTS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TyToSearch_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -23,9 +23,10 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Country search" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1An-sY-zdM">
                                 <rect key="frame" x="16" y="50" width="343" height="31.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <connections>
                                     <action selector="didChangeSearchText:" destination="vXZ-lx-hvc" eventType="editingChanged" id="7fR-lt-C0M"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="uUV-z8-7jW"/>
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="At7-Zv-jt0">
@@ -36,19 +37,28 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="2v7-D0-48n"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="th7-BK-37U">
+                                <rect key="frame" x="169" y="109.5" width="37" height="37"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.58039215686274503" green="0.32156862745098036" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="color" red="0.58039215686274503" green="0.32156862745098036" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1An-sY-zdM" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="II8-Za-Avu"/>
+                            <constraint firstItem="th7-BK-37U" firstAttribute="top" secondItem="At7-Zv-jt0" secondAttribute="top" constant="20" id="M7d-hA-DpU"/>
                             <constraint firstItem="At7-Zv-jt0" firstAttribute="top" secondItem="1An-sY-zdM" secondAttribute="bottom" constant="8" id="Pv2-EB-hpP"/>
                             <constraint firstAttribute="trailing" secondItem="At7-Zv-jt0" secondAttribute="trailing" id="TUv-Bf-ddd"/>
                             <constraint firstItem="1An-sY-zdM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="ZXS-4D-IYZ"/>
                             <constraint firstAttribute="trailing" secondItem="1An-sY-zdM" secondAttribute="trailing" constant="16" id="bJo-GH-Xdb"/>
                             <constraint firstItem="At7-Zv-jt0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="xEB-XO-vf2"/>
+                            <constraint firstItem="th7-BK-37U" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="zJt-ov-cXa"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="At7-Zv-jt0" secondAttribute="bottom" id="zsp-db-vWt"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loadingView" destination="th7-BK-37U" id="aZj-Zv-hQg"/>
                         <outlet property="tableView" destination="At7-Zv-jt0" id="Xm1-3c-IKO"/>
                     </connections>
                 </viewController>

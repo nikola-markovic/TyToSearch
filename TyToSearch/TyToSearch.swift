@@ -22,7 +22,7 @@ public class TyToSearchEngine {
         if let sens = sensitivity {
             self.sensitivity = sens
         }
-        debugPrint("🦉✅ TyTo Info: Init successful with: \(termsArray.count) words")
+        debugPrint("🦉✅ TyTo Info: Init successful with: \(termsArray.count) terms/words")
     }
     
     /// Creates new instance of TyToSeachEngine that will find search terms from a (json)data file under the specified keypath.
@@ -81,6 +81,7 @@ public class TyToSearchEngine {
     ///
     /// - Parameter searchTerm: This is the term/word that the engine will try to find a hits or a misspelled suggestions from a known array of terms/words
     /// - Parameter completion: Returns 2 arrays of hits (terms/words that contains the searchTerm) and suggestions (terms/words that the search engine found as misspelled)
+    /// - Parameter maximumSuggestionsCount: limit returning suggestion terms/words count to this number
     ///
     /// Example of init and search:
     /// ```
@@ -94,7 +95,12 @@ public class TyToSearchEngine {
     /// }
     ///
     /// ```
-    public func search(_ searchTerm: String, completion: @escaping ((hits: [String], suggestions: [String])) -> Void) {
+    public func search(_ searchTerm: String, maximumSuggestionsCount: Int = .max, completion: @escaping ((hits: [String], suggestions: [String])) -> Void) {
+        if searchTerm.count < 4 {
+            debugPrint("🦉⚠️ Warning: TyTo can't recognize typos with terms/words that are 3 or less characters long. *searchTerm* must be at least 4 characters long.")
+            completion((hits: [], suggestions: []))
+            return
+        }
         let arrayQueue = DispatchQueue.init(label: "arrayQueue")
         arrayQueue.async {
             var hits = [String]()
@@ -103,7 +109,10 @@ public class TyToSearchEngine {
             let dispatchGroup = DispatchGroup()
             
             for termCharacter in searchTerm {
-                DispatchQueue.global().async {
+                if suggestions.count >= maximumSuggestionsCount {
+                    break
+                }
+                DispatchQueue.global().sync {
                     dispatchGroup.enter()
                     let separated = searchTerm.split(separator: termCharacter, maxSplits: self.sensitivity, omittingEmptySubsequences: false)
                     if let first = separated.first,
@@ -114,10 +123,10 @@ public class TyToSearchEngine {
                                 if (regex.firstMatch(in: term, options: .anchored, range: NSRange(location: 0, length: term.count)) != nil) {
                                     arrayQueue.async {
                                         if !suggestions.contains(term) {
-                                            suggestions.append(term)
-                                            hits = suggestions.filter({ $0.lowercased().contains(searchTerm.lowercased()) })
-                                            DispatchQueue.main.async {
-                                                completion((hits: hits, suggestions: suggestions))
+                                            if suggestions.count > 0 && (term.components(separatedBy: " ").first?.contains(term) ?? false) {
+                                                suggestions.insert(term, at: 0)
+                                            } else {
+                                                suggestions.append(term)
                                             }
                                         }
                                     }
@@ -128,7 +137,7 @@ public class TyToSearchEngine {
                     dispatchGroup.leave()
                 }
             }
-            _ = dispatchGroup.wait(wallTimeout: DispatchWallTime.now() + 1.0)
+            dispatchGroup.wait()
             dispatchGroup.notify(queue: arrayQueue) {
                 hits = suggestions.filter({ $0.lowercased().contains(searchTerm.lowercased()) })
                 suggestions.removeAll(where: { hits.contains($0) })
