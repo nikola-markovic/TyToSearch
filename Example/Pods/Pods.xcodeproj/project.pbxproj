@@ -45,7 +45,7 @@
 		B747AABDA7FE7C835C1D007FBAD0517D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C1FB5235E7B02A84B2927ADB97307259 /* Pods_TyToSearch_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TyToSearch_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2477B4F26D20C4E00511178 /* TyToSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TyToSearch.swift; path = TyToSearch/TyToSearch.swift; sourceTree = "<group>"; };
-		C304C4585100E9A0547F5DA4EEEF0BEA /* TyToSearch.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TyToSearch.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C304C4585100E9A0547F5DA4EEEF0BEA /* TyToSearch.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = TyToSearch.podspec; path = ../../TyToSearch.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CEED3BCDE3B50D70B417B73A6FE5AFFE /* Pods-TyToSearch_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TyToSearch_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D7341B833A4F28E26832A60B94A5DC82 /* Pods-TyToSearch_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TyToSearch_Example-Info.plist"; sourceTree = "<group>"; };
 		D97596010E4C763C72EEAE686F69AC15 /* Pods-TyToSearch_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TyToSearch_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -116,6 +116,7 @@
 		5BE7014626C84518D4D08C69200A824F /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
+				C304C4585100E9A0547F5DA4EEEF0BEA /* TyToSearch.podspec */,
 				F419A1CF0486363F3559AAD5CD8FAF12 /* TyToSearch */,
 			);
 			name = "Development Pods";
@@ -126,7 +127,6 @@
 			children = (
 				14D6869C0B0D5C1EDA3C698F7D0E5ACD /* LICENSE */,
 				B747AABDA7FE7C835C1D007FBAD0517D /* README.md */,
-				C304C4585100E9A0547F5DA4EEEF0BEA /* TyToSearch.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
