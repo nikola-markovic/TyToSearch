@@ -18,11 +18,13 @@ public class TyToSearchEngine {
     /// - Parameter sensitivity : ⚠️ in ß: this is how many times the searchTerm is going to be split to check for errors. This one is a Beta feature. Use it with caution.
     ///
     public init(with termsArray: [String], sensitivity: Int? = TyToSearchEngine.defaultSensitivity) {
-        self.termsArray = termsArray
-        if let sens = sensitivity {
-            self.sensitivity = sens
+        DispatchQueue.global().async {
+            self.termsArray = termsArray
+            if let sens = sensitivity {
+                self.sensitivity = sens
+            }
+            debugPrint("🦉✅ TyTo Info: Init successful with: \(termsArray.count) terms/words")
         }
-        debugPrint("🦉✅ TyTo Info: Init successful with: \(termsArray.count) terms/words")
     }
     
     /// Creates new instance of TyToSeachEngine that will find search terms from a (json)data file under the specified keypath.
@@ -96,8 +98,9 @@ public class TyToSearchEngine {
     ///
     /// ```
     public func search(_ searchTerm: String, maximumSuggestionsCount: Int = .max, completion: @escaping ((hits: [String], suggestions: [String])) -> Void) {
-        if searchTerm.count < 4 {
-            debugPrint("🦉⚠️ Warning: TyTo can't recognize typos with terms/words that are 3 or less characters long. *searchTerm* must be at least 4 characters long.")
+        let shortest = 5
+        if searchTerm.count < shortest {
+            debugPrint("🦉⚠️ Warning: TyTo can't recognize typos with terms/words that are \(shortest - 1) or less characters long. *searchTerm* must be at least \(shortest) characters long.")
             completion((hits: [], suggestions: []))
             return
         }
@@ -105,30 +108,25 @@ public class TyToSearchEngine {
         arrayQueue.async {
             var hits = [String]()
             var suggestions = [String]()
-
+            
             let dispatchGroup = DispatchGroup()
             
-            for termCharacter in searchTerm {
+            for charIndex in 0..<searchTerm.count {
                 if suggestions.count >= maximumSuggestionsCount {
                     break
                 }
                 DispatchQueue.global().sync {
                     dispatchGroup.enter()
-                    let separated = searchTerm.split(separator: termCharacter, maxSplits: self.sensitivity, omittingEmptySubsequences: false)
-                    if let first = separated.first,
-                       let last = separated.last?.dropFirst() {
-                        let regexFormat = "\(first)[A-Z0-9a-z]*\(last)"
-                        if let regex = try? NSRegularExpression(pattern: regexFormat, options: .caseInsensitive) {
-                            for term in self.termsArray {
-                                if (regex.firstMatch(in: term, options: .anchored, range: NSRange(location: 0, length: term.count)) != nil) {
-                                    arrayQueue.async {
-                                        if !suggestions.contains(term) {
-                                            if suggestions.count > 0 && (term.components(separatedBy: " ").first?.contains(term) ?? false) {
-                                                suggestions.insert(term, at: 0)
-                                            } else {
-                                                suggestions.append(term)
-                                            }
-                                        }
+                    let first = searchTerm.prefix(charIndex)
+                    let suffixLength = searchTerm.count - charIndex - 2
+                    let last = suffixLength > -1 ? searchTerm.suffix(suffixLength) : ""
+                    let regexFormat = ".*\(first).?.?\(last).*"
+                    if let regex = try? NSRegularExpression(pattern: regexFormat, options: .caseInsensitive) {
+                        for term in self.termsArray {
+                            if (regex.firstMatch(in: term, options: .anchored, range: NSRange(location: 0, length: term.count)) != nil) {
+                                arrayQueue.async {
+                                    if !suggestions.contains(term.capitalized) {
+                                        suggestions.append(term.capitalized)
                                     }
                                 }
                             }
@@ -139,6 +137,7 @@ public class TyToSearchEngine {
             }
             dispatchGroup.wait()
             dispatchGroup.notify(queue: arrayQueue) {
+                suggestions.sort(by: { $0.count < $1.count })
                 hits = suggestions.filter({ $0.lowercased().contains(searchTerm.lowercased()) })
                 suggestions.removeAll(where: { hits.contains($0) })
                 DispatchQueue.main.async {
