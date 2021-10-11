@@ -29,35 +29,27 @@ class TyToSearchEngine(val termsArray: List<String>, val sensitivity: Int = 2) {
     */
     fun search(searchTerm: String, maxSuggestionCount: Int = Int.MAX_VALUE, completion: ((hits: List<String>, suggestions: List<String>)
     -> Unit)) {
-        if (searchTerm.length < 4) {
-            println("🦉⚠️ Warning: TyTo can't recognize typos with terms/words that are 3 or less characters long. *searchTerm* must be at least 4 characters long.")
+        if (searchTerm.length < 5) {
+            println("🦉⚠️ Warning: TyTo can't recognize typos with terms/words that are 4 or less characters long. *searchTerm* must be at" +
+                    " least 5 characters long.")
             completion((listOf()), (listOf()))
             return
         }
         val suggestions = mutableListOf<String>()
         GlobalScope.launch(Dispatchers.Default) {
-            val charJobs = (0..searchTerm.length - 1).map {
-                val termCharacter = searchTerm[it]
+            val charJobs = (0..searchTerm.length - 1).map { charIndex ->
                 GlobalScope.async {
-                    val separated =
-                        searchTerm.split(termCharacter, ignoreCase = true, limit = sensitivity)
-                    val first = separated.firstOrNull()
-                    val last = separated.lastOrNull()?.drop(1)
-                    if (separated.count() > 1 && first != last) {
-                        val pattern = Pattern.compile("^${first}[A-Z0-9a-z]*${last}", Pattern.CASE_INSENSITIVE)
-                        for (term in termsArray) {
-                            val match = pattern.matcher(term)
-                            match.useAnchoringBounds(true)
-                            if (suggestions.count() >= maxSuggestionCount) {
-                                break
-                            }
-                            if (match.find() && !suggestions.contains(term)) {
-                                if (suggestions.count() > 0 && term.split(" ").first().matches(pattern.toRegex())) {
-                                    suggestions.add(0, term)
-                                } else {
-                                    suggestions.add(term)
-                                }
-                            }
+                    val first = searchTerm.substring(0, charIndex)
+                    val last = searchTerm.substring(charIndex + 2, searchTerm.length)
+                    val pattern = Pattern.compile(".*$first.?.?$last.*", Pattern.CASE_INSENSITIVE)
+                    for (term in termsArray) {
+                        val match = pattern.matcher(term)
+                        match.useAnchoringBounds(true)
+                        if (suggestions.count() >= maxSuggestionCount) {
+                            break
+                        }
+                        if (match.find() && !suggestions.contains(term.replaceFirstChar { it.uppercase() })) {
+                            suggestions.add(term.replaceFirstChar { it.uppercase() })
                         }
                     }
                 }
@@ -66,6 +58,7 @@ class TyToSearchEngine(val termsArray: List<String>, val sensitivity: Int = 2) {
             GlobalScope.launch(Dispatchers.Main) {
                 val hits = suggestions.filter { it.uppercase().contains(searchTerm.uppercase()) }
                 suggestions.removeAll { hits.contains(it) }
+                suggestions.sortBy { it.length }
                 completion((hits), (suggestions))
             }
         }
